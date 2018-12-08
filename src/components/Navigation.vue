@@ -20,25 +20,32 @@ export default {
       links: [
         {
           id: 0,
-          text: 'Hello World',
-          page:'/HelloWorld'
+          text: 'Profile',
+          page:'/profile'
+        },
+        {
+          id: 1,
+          text: 'About',
+          page:'/about'
         },
         {
           id: 2,
-          text: 'About',
-          page:'/About'
-        },
-        {
-          id: 3,
           text: 'Contact',
-          page:'/Contact'
+          page:'/contact'
         }
         ,
         {
-          id: 4,
+          id: 3,
           text: 'Courses',
           page:'/courses'
         }
+        /*
+        {
+          id: 4,
+          text: 'Home',
+          page:'/home'
+        }
+        */
       ]
     }
   }
