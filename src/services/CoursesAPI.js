@@ -6,5 +6,11 @@ export default {
         .then(response => {
             return response.data
         })
+    },
+    getCourse(id) {
+        return axios.get('/get/course/info/'+id)
+        .then (response => {
+            return response.data
+        })
     }
 }

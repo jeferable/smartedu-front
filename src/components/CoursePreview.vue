@@ -11,7 +11,7 @@
                 <div class="card-action">
                     <router-link 
                     :to="url + id"
-                    >This is a link</router-link>
+                    >More information</router-link>
                 </div>
             </div>
         </div>
