@@ -2,8 +2,22 @@
   <div>
     <nav class="nav-wraper">
       <a href="#" class="brand-logo">Logo</a>
+      
+      <img 
+      class = "circle right small" 
+      src = "http://192.168.0.75:8000/storage/avatars/user.jpg"
+      >
+
+
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
+
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <router-link class = "navitem" v-for="routes in links" 
+      <router-link v-for="routes in links" 
       tag = "li" 
       v-bind:key="routes.id"
       :to="`${routes.page}`"><a>{{routes.text}}</a></router-link>
@@ -15,30 +29,41 @@
 <script>
 export default {
   name: 'Navigation',
+  created() {
+     
+  },
+  ready() {
+    
+  },
   data() {
     return {
       links: [
         {
           id: 0,
-          text: 'Hello World',
-          page:'/HelloWorld'
+          text: 'Все курсы',
+          page:'/courses'
+        },
+        {
+          id: 1,
+          text: 'Мои курсы',
+          page:'/mycources'
         },
         {
           id: 2,
-          text: 'About',
-          page:'/About'
+          text: 'Создать курс',
+          page:'/newcourse'
         },
         {
           id: 3,
-          text: 'Contact',
-          page:'/Contact'
-        }
-        ,
+          text: 'Помощь',
+          page:'/help'
+        },
         {
           id: 4,
-          text: 'Courses',
-          page:'/courses'
+          text: 'Мой профиль',
+          page:'/profile'
         }
+
       ]
     }
   }
@@ -46,7 +71,9 @@ export default {
 </script>
 
 <style>
-  navitem {
-    margin-left: 16px;
+  img.small {
+    margin: 8px;
+    width: 48px;
+    height: 48px;
   }
 </style>

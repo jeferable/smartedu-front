@@ -7,6 +7,7 @@ import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Courses from '@/components/Courses'
 import Course from '@/components/Course'
+import NewCourse from '@/components/NewCourse'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/courses/:id',
       name: 'Course',
       component: Course
+    },
+    {
+      path: '/newcourse',
+      name: 'NewCourse',
+      component: NewCourse
     }
   ]
 })

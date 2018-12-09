@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Cources</h3>
+    <h3>Доступные курсы</h3>
     <div class="row flex">
       <CoursePreview v-for="value in courses"
       v-bind:key="value.id"
@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      courses: "test data",
+      courses: '',
       loading: true
     }
   },
